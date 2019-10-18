@@ -12,7 +12,7 @@ public class ProductInvoiceGenerator {
         Scanner scanner = new Scanner(System.in);
         String productNameToType;
         String productTypeToType;
-        int ammountOfProduct = 0;
+        int amountOfProduct = 0;
         double priceForOneProduct = 0;
 
         System.out.println("Welcome into product creator. First, type product name:");
@@ -22,16 +22,16 @@ public class ProductInvoiceGenerator {
         productTypeToType = scanner.nextLine();
 
         System.out.println("Then, type product ammount:");
-        ammountOfProduct = scanner.nextInt();
-        if (ammountOfProduct < 0) {
-            ammountOfProduct = 0;
+        amountOfProduct = scanner.nextInt();
+        if (amountOfProduct < 0) {
+            amountOfProduct = 0;
         }
         System.out.println("Finally, type price for one product:");
         priceForOneProduct = scanner.nextDouble();
 
-        System.out.println("So, the product is " + productNameToType + ", of type " + productTypeToType + ", it's ammount is " + ammountOfProduct + " , and it's price for one is: " + priceForOneProduct + ".");
+        System.out.println("So, the product is " + productNameToType + ", of type " + productTypeToType + ", it's ammount is " + amountOfProduct + " , and it's price for one is: " + priceForOneProduct + ".");
 
-        return new Product(productNameToType, productTypeToType, ammountOfProduct, priceForOneProduct);
+        return new Product(productNameToType, productTypeToType, amountOfProduct, priceForOneProduct);
 
     }
 

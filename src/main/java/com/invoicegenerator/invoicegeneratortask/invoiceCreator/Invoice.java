@@ -1,32 +1,33 @@
 package com.invoicegenerator.invoicegeneratortask.invoiceCreator;
 
-import java.time.LocalDate;
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Invoice {
-    private List<Product> productList;
-    private LocalDate invoiceDate;
-    private double totalProductPrice;
+    boolean isThereAnotherProduct = true;
+    char isThereMoreProduct;
 
-    public Invoice(List<Product> productList, LocalDate invoiceDate) {
-        this.productList = productList;
-        this.invoiceDate = invoiceDate;
+    public Invoice() {
     }
 
-    public List<Product> getProductList() {
-        return productList;
-    }
+    public ArrayList<Product> createListOfProductsForInvoice() {
+        ArrayList<Product> listOfProductForInvoice = new ArrayList<>();
 
-    public LocalDate getInvoiceDate() {
-        return invoiceDate;
-    }
-
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
-    }
-
-    public void setInvoiceDate(LocalDate invoiceDate) {
-        this.invoiceDate = invoiceDate;
+        while (isThereAnotherProduct) {
+            System.out.println("Type product, which will be placed in Invoice:");
+            Product productCreation = new ProductInvoiceGenerator().createProduct();
+            listOfProductForInvoice.add(productCreation);
+            System.out.println("Do you want to add another product? Type 1 if there is another product. If no, type 0.");
+            Scanner scanner = new Scanner(System.in);
+            isThereMoreProduct = (char) scanner.nextByte();
+            if (isThereMoreProduct == 1) {
+            } else if (isThereMoreProduct == 0) {
+                isThereAnotherProduct = false;
+            } else {
+                System.out.println("Warning, detected wrong character. You have to retype.");
+            }
+        }
+        return listOfProductForInvoice;
     }
 
 }

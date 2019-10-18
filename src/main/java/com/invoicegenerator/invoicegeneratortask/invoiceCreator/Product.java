@@ -62,6 +62,6 @@ public class Product {
                 ", quanity=" + quantity +
                 ", priceForOneProduct=" + priceForOneProduct +
                 ", totalPriceForProduct=" + totalPriceForProduct +
-                '}';
+                '}' + "\n";
     }
 }
