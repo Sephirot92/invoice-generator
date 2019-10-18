@@ -1,10 +1,13 @@
 package com.invoicegenerator.invoicegeneratortask.invoiceCreator;
 
+import java.util.ArrayList;
+
 public class InvoiceFrabricator {
-    private Invoice invoice;
+    private ArrayList<Product> invoice;
+    protected Product product;
 
     public InvoiceFrabricator(Invoice invoice) {
-        this.invoice = invoice;
+        this.invoice = new ArrayList<Product>();
     }
 
 }

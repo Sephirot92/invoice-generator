@@ -6,6 +6,7 @@ import java.util.List;
 public class Invoice {
     private List<Product> productList;
     private LocalDate invoiceDate;
+    private double totalProductPrice;
 
     public Invoice(List<Product> productList, LocalDate invoiceDate) {
         this.productList = productList;
@@ -27,4 +28,5 @@ public class Invoice {
     public void setInvoiceDate(LocalDate invoiceDate) {
         this.invoiceDate = invoiceDate;
     }
+
 }
