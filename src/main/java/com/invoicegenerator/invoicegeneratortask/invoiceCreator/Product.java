@@ -3,14 +3,14 @@ package com.invoicegenerator.invoicegeneratortask.invoiceCreator;
 public class Product {
     private String productName;
     private String productCategory;
-    private int quanity;
+    private int quantity;
     private double priceForOneProduct;
     private double totalPriceForProduct;
 
     public Product(String productName, String productCategory, int quanity, double priceForOneProduct) {
         this.productName = productName;
         this.productCategory = productCategory;
-        this.quanity = quanity;
+        this.quantity = quanity;
         this.priceForOneProduct = priceForOneProduct;
     }
 
@@ -22,8 +22,8 @@ public class Product {
         return productCategory;
     }
 
-    public int getQuanity() {
-        return quanity;
+    public int getQuantity() {
+        return quantity;
     }
 
     public double getPriceForOneProduct() {
@@ -34,12 +34,32 @@ public class Product {
         return totalPriceForProduct;
     }
 
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public void setProductCategory(String productCategory) {
+        this.productCategory = productCategory;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public void setPriceForOneProduct(double priceForOneProduct) {
+        this.priceForOneProduct = priceForOneProduct;
+    }
+
+    public void setTotalPriceForProduct(double totalPriceForProduct) {
+        this.totalPriceForProduct = totalPriceForProduct;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
                 "productName='" + productName + '\'' +
                 ", productCategory='" + productCategory + '\'' +
-                ", quanity=" + quanity +
+                ", quanity=" + quantity +
                 ", priceForOneProduct=" + priceForOneProduct +
                 ", totalPriceForProduct=" + totalPriceForProduct +
                 '}';
