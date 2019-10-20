@@ -1,14 +1,11 @@
 package com.invoicegenerator.invoicegeneratortask;
 
-import com.invoicegenerator.invoicegeneratortask.invoiceCreator.Invoice;
+import com.invoicegenerator.invoicegeneratortask.invoiceCreator.InvoiceFabricator;
 
 public class InvoiceGeneratorTaskApplication {
 
     public static void main(String[] args) {
-        Invoice invoice = new Invoice();
-
-        System.out.println(invoice.createListOfProductsForInvoice());
-
+        InvoiceFabricator invoiceFabricator = new InvoiceFabricator();
+        System.out.println(invoiceFabricator.fabricateInvoices());
     }
-
 }

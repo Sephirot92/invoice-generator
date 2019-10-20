@@ -14,7 +14,7 @@ public class Invoice {
         ArrayList<Product> listOfProductForInvoice = new ArrayList<>();
 
         while (isThereAnotherProduct) {
-            System.out.println("Type product, which will be placed in Invoice:");
+            System.out.println("Type products, which will be placed in Invoice:");
             Product productCreation = new ProductInvoiceGenerator().createProduct();
             listOfProductForInvoice.add(productCreation);
             System.out.println("Do you want to add another product? Type 1 if there is another product. If no, type 0.");
